@@ -24,7 +24,7 @@
 
 1. **Java 17** ou versão superior.
 2. **MySQL** instalado localmente (ou utilizar o docker).
-3. **LiveServer** extensão do VSCode utilizado para rodar a aplicação no localhost
+3. **LiveServer** extensão do VSCode utilizado para rodar a aplicação no localhost mas pode ser utilizado o http-server
 
 ### Passos para Configuração
 
