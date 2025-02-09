@@ -1,0 +1,17 @@
+.line {
+    height: 1px;
+    width: 100%;
+    background-color: #EFF1F4;
+}
+
+.employee-line {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: .5rem;
+}
+
+.employee-line h4 {
+    font-size: 14px;
+    font-weight: 600;
+}

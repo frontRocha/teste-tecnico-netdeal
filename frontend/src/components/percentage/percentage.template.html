@@ -1,0 +1,6 @@
+<div class="{{ $ctrl.cssClass }}">
+    <span class="strength">{{ $ctrl.passwordStrength }}%</span>
+    <div>
+        <div class="bar {{ $ctrl.passwordStatus.toLowerCase() }}-line" ng-style="{'width': $ctrl.passwordStrength + '%'}"></div>
+    </div>
+</div>

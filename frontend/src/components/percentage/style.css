@@ -1,0 +1,19 @@
+.bar {
+    height: 2px;
+}
+
+.good-line {
+    background-color: #55F578;
+}
+
+.average-line {
+    background-color: #F5BD55;
+}
+
+.bad-line {
+    background-color: #ED6767;
+}
+
+.strong-line {
+    background-color: #13892D;
+}

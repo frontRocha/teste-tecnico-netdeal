@@ -1,0 +1,139 @@
+.list {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: .5rem;
+}
+
+.list ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    list-style: none;
+}
+
+.employee {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: .5rem;
+}
+
+.percent {
+    text-align: center;
+    min-width: 40px;
+}
+
+.strength {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    max-width: 220px;
+    width: 100%;
+    color: #7A7D82;
+}
+
+.employee-element {
+    display: flex;
+    gap: .5rem;
+    width: 100%;
+}
+
+.employee-element h4 {
+    max-width: 350px;
+    word-wrap: break-word;
+}
+
+.remove-fields-button-sub,
+.remove-item-button-class {
+    background-color: rgb(236, 69, 69);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+    transition-duration: .2s;
+}
+
+.remove-fields-button-sub:hover,
+.remove-item-button-class:hover {
+    background-color: rgb(175, 56, 56);
+}
+
+.add-fields-button-class {
+    background-color: #38b972;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+    transition-duration: .2s;
+}
+
+.add-fields-button-class:hover {
+    background-color: #1b8048;
+}
+
+.form-sub-employee {
+    display: flex;
+    align-items: end;
+    gap: .5rem;
+    padding-left: 25px;
+}
+
+.form-sub-employee .input-container-sub {
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-input-sub {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: #272A2D;
+    font-weight: 500;
+    border: 1px solid #D0D5DD;
+    border-radius: 0.375rem;
+    letter-spacing: normal;
+    transition: border 0.2s ease;
+    outline: none;
+    box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.02);
+    padding: 4px 6px;
+}
+
+.input-container-sub label {
+    font-size: 13px;
+}
+
+.add-confirm-button-sub {
+    background-color: #38b972;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+    transition-duration: .2s;
+}
+
+.add-confirm-button-sub:hover {
+    background-color: #1f864d;
+}
+
+.add-confirm-button-sub:disabled {
+    background-color: #3a9463;
+}

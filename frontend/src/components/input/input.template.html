@@ -1,0 +1,10 @@
+<label>{{ $ctrl.labelText }}</label>
+<input ng-model="$ctrl.inputValue" 
+        placeholder="{{ $ctrl.placeholderText }}" 
+        required="$ctrl.requiredInput"
+        ng-required="true" 
+        ng-pattern="$ctrl.pattern" 
+        ng-minlength="$ctrl.minLength" 
+        ng-maxlength="$ctrl.maxLength"
+        class="{{ $ctrl.cssClass }}" />
+</div>

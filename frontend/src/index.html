@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/c2248b1db0.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./views/home/style.css" />
+    <link rel="stylesheet" href="./components/navbar/style.css" />
+    <link rel="stylesheet" href="./components/list/style.css" />
+    <link rel="stylesheet" href="./components/percentage/style.css" />
+    <link rel="stylesheet" href="./components/badge/style.css" />
+    <link rel="stylesheet" href="./components/employee/style.css" />
+    <link rel="stylesheet" href="./components/spinLoader/style.css" />
+    <link rel="stylesheet" href="./components/toast/style.css" />
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body ng-app="passwordRegister">
+    <div>
+        <navbar-component></navbar-component>
+        <div ng-view></div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+    <script src="./app.js"></script> 
+    <script src="./controllers/HomeController.js"></script>
+    <script src="./services/EmployeeService.js"></script>
+    <script src="./services/ToastService.js"></script>
+    <script src="./components/button/button.component.js"></script>
+    <script src="./components/input/input.component.js"></script>
+    <script src="./components/navbar/navbar.component.js"></script>
+    <script src="./components/list/list.component.js"></script>
+    <script src="./components/employee/employee.component.js"></script>
+    <script src="./components/badge/badge.component.js"></script>
+    <script src="./components/percentage/percentage.component.js"></script>
+    <script src="./components/spinLoader/spinLoader.component.js"></script>
+    <script src="./components/toast/toast.component.js"></script>
+</body>
+</html>

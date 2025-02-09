@@ -1,0 +1,92 @@
+<div class="list">
+    <ul>
+        <li ng-repeat="employee in $ctrl.employees track by employee.id">
+            <div class="employee">
+                <employee-component 
+                    css-class="employee-element" 
+                    name="employee.name" 
+                    class="employee-element">
+                </employee-component>
+
+                <div class="strength">
+                    <percentage-component 
+                        css-class="percent" 
+                        password-strength="employee.passwordStrength" 
+                        password-status="employee.passwordStatus">
+                    </percentage-component>
+
+                    <badge-component 
+                        css-class="badge" 
+                        password-status="employee.passwordStatus">
+                    </badge-component>
+
+                    <button-component 
+                        css-class="remove-item-button-class"
+                        disabled="employee.loading || employee.creatingNewEmployee"
+                        button-text=""
+                        type="button"
+                        submit="$ctrl.deleteEmployee(employee)"
+                        icon="fa fa-trash"
+                        is-loading="employee.loading">
+                    </button-component>
+
+                    <button-component 
+                        css-class="add-fields-button-class"
+                        disabled="employee.creatingNewEmployee || employee.loading"
+                        button-text=""
+                        type="button"
+                        submit="$ctrl.addNewFieldsToEmployee(employee)"
+                        icon="fa fa-plus">
+                    </button-component>
+                </div>
+            </div>
+
+            <form name="subEmployeeForm" class="form-sub-employee" ng-if="employee.creatingNewEmployee">
+                <input-component
+                    label-text="Nome"
+                    input-value="$ctrl.name"
+                    placeholder-text="Alexandre..."
+                    required-input="true"
+                    css-class="custom-input-sub"
+                    class="input-container-sub">
+                </input-component>
+
+                <input-component
+                    label-text="Senha"
+                    input-value="$ctrl.password"
+                    placeholder-text="Senha forte..."
+                    required-input="true"
+                    css-class="custom-input-sub"
+                    class="input-container-sub">
+                </input-component>
+
+                <button-component 
+                    css-class="add-confirm-button-sub"
+                    disabled="employee.loading"
+                    type="button"
+                    submit="$ctrl.confirmCreateNewEmployee(employee)"
+                    icon="fa-solid fa-check"
+                    class="input-container-sub"
+                    is-loading="employee.loading">
+                </button-component>
+
+                <button-component 
+                    css-class="remove-fields-button-sub"
+                    disabled="employee.loading"
+                    type="button"
+                    submit="$ctrl.cancelCreateNewEmployee(employee)"
+                    icon="fa-solid fa-x"
+                    class="input-container-sub">
+                </button-component>
+            </form>
+
+            <div ng-if="employee.children && employee.children.length > 0" style="padding-left: 20px;" class="field">
+                <list-component 
+                    employees="employee.children" 
+                    on-delete-employee="$ctrl.deleteEmployee(employee)" 
+                    on-create-employee="$ctrl.onCreateEmployeeInternConfirm(employee)">
+                </list-component>
+            </div>
+        </li>
+    </ul>
+</div>

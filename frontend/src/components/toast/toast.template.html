@@ -1,0 +1,11 @@
+<div class="toast {{ $ctrl.type }} {{ $ctrl.isActive ? 'active' : '' }}" ng-click="$ctrl.closeToast()">
+    <div class="toast-content">
+        <i class="icon {{ $ctrl.icon }}"></i>
+        <div class="message">
+            <span class="text text-1">{{ $ctrl.type[0].toUpperCase() + $ctrl.type.substring(1).toLowerCase() }}</span>
+            <span class="text text-2">{{ $ctrl.message }}</span>
+        </div>
+    </div>
+    <i class="fa-solid fa-xmark close" ng-click="$ctrl.closeToast()"></i>
+    <div class="progress active"></div>
+</div>

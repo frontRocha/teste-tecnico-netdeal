@@ -1,0 +1,57 @@
+<section ng-init="initializeComponent()" class="section-home">
+    <div class="toast-container">
+        <toast-component
+            ng-repeat="toast in toasts"
+            type="{{ toast.type }}"
+            message="{{ toast.message }}"
+            on-close="removeToast(toast.id)">
+        </toast-component>
+    </div>
+
+    <div class="employees-container">
+        <form name="employeeForm" class="form-employee">
+            <div class="input-container">
+                <input-component
+                    label-text="Nome"
+                    input-value="name"
+                    placeholder-text="Alexandre..."
+                    required-input="true"
+                    css-class="custom-input-class">
+                </input-component>
+            </div>
+
+            <div class="input-container">
+                <input-component
+                    label-text="Senha"
+                    input-value="password"
+                    placeholder-text="Senha forte..."
+                    required-input="true"
+                    css-class="custom-input-class">
+                </input-component>
+            </div>
+
+            <div class="button-container">
+                <button-component 
+                    form="employeeForm"
+                    css-class="add-item-button-class"
+                    disabled="true"
+                    button-text="Registrar"
+                    type="button"
+                    submit="registerNewEmployee()"
+                    is-loading="isLoading">
+                </button-component>
+            </div>
+        </form>
+        <div class="employees-content">
+            <div ng-show="employees.length === 0" class="empty-illustration">
+                <img src="/src/assets/emptyIllustration.png" alt="No Design">
+                <p>Você não possui nada registrado.</p>
+            </div>            
+            <list-component ng-show="employees.length > 0"
+                            employees="employees" 
+                            on-delete-employee="deleteEmployee(employee)" 
+                            on-create-employee="registerNewEmployeeWithParentId(employee)">
+            </list-component>
+        </div>
+    </div>
+</section>

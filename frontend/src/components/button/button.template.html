@@ -1,0 +1,15 @@
+<button class="{{ $ctrl.cssClass }}" 
+        ng-click="$ctrl.submit()" 
+        type="{{ $ctrl.typeButton }}" 
+        ng-disabled="($ctrl.disabled && !$ctrl.form.$valid) || $ctrl.isLoading">
+    <spinner
+        size="20px"
+        spin-color="white"
+        ng-show="$ctrl.isLoading">
+    </spinner>
+
+    <span ng-show="!$ctrl.isLoading">
+        <i class="{{ $ctrl.icon }}" ng-if="$ctrl.icon"></i>
+        {{ $ctrl.buttonText }}
+    </span>
+</button>
